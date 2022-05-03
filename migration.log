@@ -1,0 +1,73 @@
+➜  lotery git:(master) ✗ truffle migrate --network rinkeby
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+Starting migrations...
+======================
+> Network name:    'rinkeby'
+> Network id:      4
+> Block gas limit: 30000000 (0x1c9c380)
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > transaction hash:    0x37fd1ffc0239a2e0c95a654f9ca9c4d4f177a457e6a0583b0e4893d1d768dc0d
+   > Blocks: 1            Seconds: 14
+   > contract address:    0x4d83Af3eecD3844993168105cf85dd5720ebD7b5
+   > block number:        10613234
+   > block timestamp:     1651603601
+   > account:             0x829ec9b4c6048BFdcC11882339279146B7d78872
+   > balance:             0.098979132562044018
+   > gas used:            250154 (0x3d12a)
+   > gas price:           4.080955883 gwei
+   > value sent:          0 ETH
+   > total cost:          0.001020867437955982 ETH
+
+   Pausing for 2 confirmations...
+
+   -------------------------------
+   > confirmation number: 1 (block: 10613235)
+   > confirmation number: 2 (block: 10613236)
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.001020867437955982 ETH
+
+
+2_lotery_migration.js
+=====================
+
+   Deploying 'Lotery'
+   ------------------
+   > transaction hash:    0x0443fce94714dff505712993f6fbb0696c288fc9636e633e8e83ae8c267182b5
+   > Blocks: 0            Seconds: 13
+   > contract address:    0x0120a7c1383D5F3e3F29287b8dAba7Edd7360fA9
+   > block number:        10613239
+   > block timestamp:     1651603676
+   > account:             0x829ec9b4c6048BFdcC11882339279146B7d78872
+   > balance:             0.09633453238906993
+   > gas used:            644840 (0x9d6e8)
+   > gas price:           3.838307682 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00247509432566088 ETH
+
+   Pausing for 2 confirmations...
+
+   -------------------------------
+   > confirmation number: 1 (block: 10613240)
+   > confirmation number: 2 (block: 10613241)
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.00247509432566088 ETH
+
+Summary
+=======
+> Total deployments:   2
+> Final cost:          0.003495961763616862 ETH
