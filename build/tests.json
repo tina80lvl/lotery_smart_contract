@@ -1,0 +1,16 @@
+{
+  "contracts": {
+    "Lotery": "3d94e14e6cf022bdf27c96240e62b3733cd54f8b",
+    "Migrations": "3549f2def7604d89e1a0ec58d998bdc44794f29a"
+  },
+  "tests": {
+    "tests/test_lotery.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": ".",
+      "sha1": "a1fb416edff243ce916a973cadd24feacd2570b0",
+      "txhash": []
+    }
+  },
+  "tx": {}
+}

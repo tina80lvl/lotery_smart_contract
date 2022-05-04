@@ -9,8 +9,7 @@ w3 = Web3(
 )
 chain_id = 4
 owner_address = '0x829ec9b4c6048BFdcC11882339279146B7d78872'
-owner_private = os.getenv('PRIVATE_KEY_0')
-nonce = w3.eth.getTransactionCount(owner_address)
+owner_private = 'PRIVATE_KEY_0'
 
 abi = json.load(open('build/contracts/Lotery.json'))['abi']
 contract_address = '0x0120a7c1383D5F3e3F29287b8dAba7Edd7360fA9'
@@ -41,7 +40,7 @@ def enter_participant(lotery, partic):
             "gasPrice": w3.eth.gas_price,
             "from": partic['address'],
             "value": Web3.toWei(partic['value'], 'ether'),
-            "nonce": nonce + 1,
+            "nonce": Web3.toHex(w3.eth.getTransactionCount(partic['address'])),
         }
     )
     
@@ -60,7 +59,7 @@ def pick_winner_v1(lotery):
             "chainId": chain_id,
             "gasPrice": w3.eth.gas_price,
             "from": owner_address,
-            # "nonce": nonce + 2,
+            "nonce": Web3.toHex(w3.eth.getTransactionCount(owner_address)),
         }
     )
     signed_greeting_txn = w3.eth.account.sign_transaction(
@@ -88,14 +87,17 @@ def interact(participants_pass):
         enter_participant(lotery, participant)
         print(f'Current Lotery Balance: {lotery.functions.getBalance().call()}')
     
-    # # to make a screenshot
+    # to make a screenshot
     # os.sleep(300000)
 
-    # pick_winner_v2(lotery)
-    # pick_winner_v1(lotery)
+    # NOTE: folowwing 2 functions can return different values, v2 just to view the result
 
+    # 1: just calling a function to get the winner addres (in according to TR)
+    pick_winner_v2(lotery)
+    # 2: actually executes the function
+    pick_winner_v1(lotery)
 
 
 if __name__ == '__main__':
+    # path to input file with partisipants' addresses
     interact('data/addresses.json')
-    # get_participants_from_file('data/addresses.json')
