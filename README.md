@@ -1,7 +1,7 @@
 # Smart Contract: Lotery
 In this repo you can find a simple realisation of lotery in smart contract.
 
-*__Contract chain:__ [Rinkeby](https://rinkeby.infura.io/v3/13b0500f54974170a60327b443e4e063)*<br>
+*__Contract chain:__ [Rinkeby](https://rinkeby.etherscan.io/address/0x0120a7c1383D5F3e3F29287b8dAba7Edd7360fA9)*<br>
 *__Contract address:__ 0x0120a7c1383D5F3e3F29287b8dAba7Edd7360fA9*
 
 ![](png/deploy.png)
